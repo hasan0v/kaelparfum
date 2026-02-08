@@ -1,338 +1,338 @@
-# 🌸 KƏEL PARFÜM - E-Commerce Platform
+# 🌸 KƏEL PARFÜM - E-Ticarət Platforması
 
-A modern, full-featured e-commerce platform for KƏEL PARFÜM - a premium perfume and cosmetics shop based in Azerbaijan. Built with Next.js 16, TypeScript, and Supabase.
+Azərbaycanda fəaliyyət göstərən premium ətir və kosmetika mağazası KƏEL PARFÜM üçün müasir, tam funksiyalı e-ticarət platforması. Next.js 16, TypeScript və Supabase ilə hazırlanmışdır.
 
 ![Next.js](https://img.shields.io/badge/Next.js-16.1-black)
 ![TypeScript](https://img.shields.io/badge/TypeScript-5.0-blue)
 ![Supabase](https://img.shields.io/badge/Supabase-2.90-green)
 ![Tailwind CSS](https://img.shields.io/badge/Tailwind-4.0-38bdf8)
 
-## 📋 Table of Contents
+## 📋 Məzmun
 
-- [Features](#-features)
-- [Tech Stack](#-tech-stack)
-- [Project Structure](#-project-structure)
-- [Getting Started](#-getting-started)
-- [Environment Variables](#-environment-variables)
-- [Database Setup](#-database-setup)
-- [Scripts](#-scripts)
-- [Deployment](#-deployment)
-- [Contributing](#-contributing)
+- [Xüsusiyyətlər](#-xüsusiyyətlər)
+- [Texnologiya Yığını](#-texnologiya-yığını)
+- [Layihə Strukturu](#-layihə-strukturu)
+- [Başlanğıc](#-başlanğıc)
+- [Mühit Dəyişənləri](#-mühit-dəyişənləri)
+- [Verilənlər Bazasının Qurulması](#-verilənlər-bazasının-qurulması)
+- [Skriptlər](#-skriptlər)
+- [Yerləşdirmə](#-yerləşdirmə)
+- [Töhfə](#-töhfə)
 
-## ✨ Features
+## ✨ Xüsusiyyətlər
 
-### Customer Features
-- 🛍️ **Product Catalog** - Browse products by categories and brands with advanced filtering
-- 🔍 **Full-text Search** - Fast product search with PostgreSQL full-text search
-- 🛒 **Shopping Cart** - Persistent cart with Zustand state management
-- ❤️ **Wishlist** - Save favorite products for later
-- 👤 **User Authentication** - Secure sign up/login with Supabase Auth
-- 📦 **Order Management** - Place orders, track status, and view order history
-- ⭐ **Product Reviews** - Rate and review products (verified purchase badges)
-- 💬 **WhatsApp Integration** - Direct order communication via WhatsApp
-- 📱 **Responsive Design** - Optimized for mobile, tablet, and desktop
-- 🌙 **Dark Mode** - Theme toggle with next-themes
-- 🎨 **Modern UI** - Beautiful interface with Radix UI and Tailwind CSS
+### İstifadəçi Xüsusiyyətləri
+- 🛍️ **Məhsul Kataloqu** - Kateqoriya və brendlərə görə məhsulları axtarış və filterləmə
+- 🔍 **Tam Mətn Axtarışı** - PostgreSQL ilə sürətli məhsul axtarışı
+- 🛒 **Alış-veriş Səbəti** - Zustand ilə davamlı səbət idarəetməsi
+- ❤️ **Sevimlilər** - Məhsulları sevimli kimi saxlama
+- 👤 **İstifadəçi Autentifikasiyası** - Supabase Auth ilə təhlükəsiz qeydiyyat/giriş
+- 📦 **Sifariş İdarəetməsi** - Sifariş yerləşdirmə, izləmə və tarixçə
+- ⭐ **Məhsul Rəyləri** - Məhsullara qiymət və rəy yazma (təsdiqlənmiş alış nişanı)
+- 💬 **WhatsApp İnteqrasiyası** - Sifarişlər üçün birbaşa WhatsApp əlaqəsi
+- 📱 **Responsiv Dizayn** - Mobil, planşet və masaüstü üçün optimallaşdırılmış
+- 🌙 **Qaranlıq Rejim** - next-themes ilə tema dəyişdirmə
+- 🎨 **Müasir İnterfeys** - Radix UI və Tailwind CSS ilə gözəl interfeys
 
-### Admin Features
-- 📊 **Admin Dashboard** - Comprehensive admin panel for store management
-- 📦 **Product Management** - CRUD operations for products with variants
-- 🏷️ **Category Management** - Organize products with nested categories
-- 🏢 **Brand Management** - Manage product brands
-- 🚚 **Order Processing** - View, update, and manage customer orders
-- 📝 **Review Moderation** - Approve/reject customer reviews
-- 👥 **User Management** - View and manage registered users
-- ⚙️ **Site Settings** - Configure delivery fees, WhatsApp number, and more
-- 📸 **Image Upload** - Direct upload to Supabase Storage with drag-and-drop
-- 🔐 **Role-Based Access** - Protected admin routes with middleware
+### Admin Xüsusiyyətləri
+- 📊 **Admin Paneli** - Mağaza idarəetməsi üçün əhatəli admin paneli
+- 📦 **Məhsul İdarəetməsi** - Variantları olan məhsullar üçün CRUD əməliyyatları
+- 🏷️ **Kateqoriya İdarəetməsi** - Iç-içə kateqoriyalarla məhsulları təşkil etmə
+- 🏢 **Brend İdarəetməsi** - Məhsul brendlərini idarə etmə
+- 🚚 **Sifariş Emalı** - Müştəri sifarişlərini baxma, yeniləmə və idarə etmə
+- 📝 **Rəy Moderasiyası** - Müştəri rəylərini təsdiqləmə/rədd etmə
+- 👥 **İstifadəçi İdarəetməsi** - Qeydiyyatdan keçmiş istifadəçiləri baxma və idarə etmə
+- ⚙️ **Sayt Parametrləri** - Çatdırılma haqqı, WhatsApp nömrəsi və s. konfiqurasiya
+- 📸 **Şəkil Yükləmə** - Supabase Storage-a birbaşa drag-and-drop ilə yükləmə
+- 🔐 **Rol Əsaslı Giriş** - Middleware ilə qorunan admin marşrutları
 
-### Technical Features
-- ⚡ **Server Actions** - Modern data fetching with Next.js Server Actions
-- 🔄 **React Query** - Efficient data caching and synchronization
-- 🎯 **Type-Safe** - Full TypeScript support with generated Supabase types
-- 🛡️ **Row Level Security** - Secure database access with Supabase RLS
-- 📈 **SEO Optimized** - Meta tags, structured data, and dynamic sitemaps
-- 🎬 **Animations** - Smooth animations with Framer Motion
-- 📊 **Analytics Ready** - View count tracking and product analytics
-- 🔔 **Toast Notifications** - User feedback with Sonner
+### Texniki Xüsusiyyətlər
+- ⚡ **Server Actions** - Next.js Server Actions ilə müasir data fetching
+- 🔄 **React Query** - Effektiv data keşləmə və sinxronizasiya
+- 🎯 **Type-Safe** - Supabase tipləri ilə tam TypeScript dəstəyi
+- 🛡️ **Row Level Security** - Supabase RLS ilə təhlükəsiz verilənlər bazası girişi
+- 📈 **SEO Optimallaşdırılmış** - Meta teqlər, strukturlaşdırılmış data və dinamik sitemap
+- 🎬 **Animasiyalar** - Framer Motion ilə hamar animasiyalar
+- 📊 **Analitika Hazır** - Baxış sayının izlənməsi və məhsul analitikası
+- 🔔 **Bildiriş Sistemı** - Sonner ilə istifadəçi geri bildirimi
 
-## 🛠️ Tech Stack
+## 🛠️ Texnologiya Yığını
 
 ### Frontend
 - **Framework:** [Next.js 16](https://nextjs.org/) (App Router)
-- **Language:** [TypeScript 5](https://www.typescriptlang.org/)
-- **Styling:** [Tailwind CSS 4](https://tailwindcss.com/)
-- **UI Components:** [Radix UI](https://www.radix-ui.com/)
-- **Icons:** [Lucide React](https://lucide.dev/)
-- **State Management:** [Zustand](https://zustand-demo.pmnd.rs/)
+- **Dil:** [TypeScript 5](https://www.typescriptlang.org/)
+- **Üslublandırma:** [Tailwind CSS 4](https://tailwindcss.com/)
+- **UI Komponentlər:** [Radix UI](https://www.radix-ui.com/)
+- **İkonlar:** [Lucide React](https://lucide.dev/)
+- **State İdarəetməsi:** [Zustand](https://zustand-demo.pmnd.rs/)
 - **Data Fetching:** [TanStack Query](https://tanstack.com/query/latest)
-- **Forms:** [React Hook Form](https://react-hook-form.com/) + [Zod](https://zod.dev/)
-- **Animations:** [Framer Motion](https://www.framer.com/motion/)
-- **Carousels:** [Embla Carousel](https://www.embla-carousel.com/)
-- **File Upload:** [React Dropzone](https://react-dropzone.js.org/)
+- **Formlar:** [React Hook Form](https://react-hook-form.com/) + [Zod](https://zod.dev/)
+- **Animasiyalar:** [Framer Motion](https://www.framer.com/motion/)
+- **Karusellər:** [Embla Carousel](https://www.embla-carousel.com/)
+- **Fayl Yükləmə:** [React Dropzone](https://react-dropzone.js.org/)
 
 ### Backend
-- **Database:** [Supabase](https://supabase.com/) (PostgreSQL)
-- **Authentication:** Supabase Auth
-- **Storage:** Supabase Storage
-- **Image Optimization:** [Sharp](https://sharp.pixelplumbing.com/)
+- **Verilənlər Bazası:** [Supabase](https://supabase.com/) (PostgreSQL)
+- **Autentifikasiya:** Supabase Auth
+- **Saxlama:** Supabase Storage
+- **Şəkil Optimallaşdırma:** [Sharp](https://sharp.pixelplumbing.com/)
 
-### Development Tools
-- **Package Manager:** npm
+### Development Alətləri
+- **Paket Meneceri:** npm
 - **Linting:** ESLint
-- **Code Quality:** TypeScript Strict Mode
+- **Kod Keyfiyyəti:** TypeScript Strict Mode
 
-## 📁 Project Structure
+## 📁 Layihə Strukturu
 
 ```
 kaelparfum/
 ├── src/
-│   ├── app/                      # Next.js App Router pages
-│   │   ├── (public)/            # Public routes
-│   │   │   ├── brendler/        # Brands listing & detail
-│   │   │   ├── kateqoriyalar/   # Categories listing & detail
-│   │   │   ├── mehsullar/       # Products listing & detail
-│   │   │   ├── haqqimizda/      # About page
-│   │   │   └── giris/           # Login page
-│   │   ├── admin/               # Admin panel (protected)
-│   │   │   ├── brendler/        # Brand management
-│   │   │   ├── kateqoriyalar/   # Category management
-│   │   │   ├── mehsullar/       # Product management
-│   │   │   ├── sifarisler/      # Order management
-│   │   │   ├── serhler/         # Review moderation
-│   │   │   ├── istifadeciler/   # User management
-│   │   │   └── parametrler/     # Site settings
-│   │   ├── hesabim/             # User account pages
-│   │   │   ├── sifarisler/      # Order history
-│   │   │   └── sevimliler/      # Wishlist
-│   │   ├── sebet/               # Shopping cart
-│   │   ├── sifaris/             # Checkout
-│   │   └── api/                 # API routes
-│   ├── components/              # React components
-│   │   ├── admin/               # Admin-specific components
-│   │   ├── cart/                # Cart components
-│   │   ├── layout/              # Layout components
-│   │   ├── product/             # Product components
-│   │   └── ui/                  # Reusable UI components (shadcn/ui)
-│   ├── lib/                     # Utilities and libraries
+│   ├── app/                      # Next.js App Router səhifələri
+│   │   ├── (public)/            # İctimai marşrutlar
+│   │   │   ├── brendler/        # Brendlərin siyahısı və təfərrüatı
+│   │   │   ├── kateqoriyalar/   # Kateqoriyaların siyahısı və təfərrüatı
+│   │   │   ├── mehsullar/       # Məhsulların siyahısı və təfərrüatı
+│   │   │   ├── haqqimizda/      # Haqqımızda səhifəsi
+│   │   │   └── giris/           # Giriş səhifəsi
+│   │   ├── admin/               # Admin paneli (qorunan)
+│   │   │   ├── brendler/        # Brend idarəetməsi
+│   │   │   ├── kateqoriyalar/   # Kateqoriya idarəetməsi
+│   │   │   ├── mehsullar/       # Məhsul idarəetməsi
+│   │   │   ├── sifarisler/      # Sifariş idarəetməsi
+│   │   │   ├── serhler/         # Rəy moderasiyası
+│   │   │   ├── istifadeciler/   # İstifadəçi idarəetməsi
+│   │   │   └── parametrler/     # Sayt parametrləri
+│   │   ├── hesabim/             # İstifadəçi hesabı səhifələri
+│   │   │   ├── sifarisler/      # Sifariş tarixçəsi
+│   │   │   └── sevimliler/      # Sevimlilər
+│   │   ├── sebet/               # Alış-veriş səbəti
+│   │   ├── sifaris/             # Ödəniş
+│   │   └── api/                 # API marşrutları
+│   ├── components/              # React komponentlər
+│   │   ├── admin/               # Admin-spesifik komponentlər
+│   │   ├── cart/                # Səbət komponentləri
+│   │   ├── layout/              # Layout komponentləri
+│   │   ├── product/             # Məhsul komponentləri
+│   │   └── ui/                  # Təkrar istifadə olunan UI komponentləri (shadcn/ui)
+│   ├── lib/                     # Yardımçı və kitabxanalar
 │   │   ├── actions/             # Server Actions
-│   │   ├── constants/           # Configuration constants
-│   │   ├── hooks/               # Custom React hooks
-│   │   ├── supabase/            # Supabase clients
-│   │   └── utils/               # Utility functions
-│   ├── types/                   # TypeScript type definitions
-│   └── middleware.ts            # Next.js middleware (auth & admin protection)
-├── supabase/                    # Database schema
-│   ├── schema.sql               # Database schema
-│   ├── seed.sql                 # Seed data
-│   └── storage.sql              # Storage configuration
-└── public/                      # Static assets
+│   │   ├── constants/           # Konfiqurasiya sabitləri
+│   │   ├── hooks/               # Xüsusi React hooks
+│   │   ├── supabase/            # Supabase müştəriləri
+│   │   └── utils/               # Yardımçı funksiyalar
+│   ├── types/                   # TypeScript tip tərifləri
+│   └── middleware.ts            # Next.js middleware (auth və admin qoruması)
+├── supabase/                    # Verilənlər bazası sxemi
+│   ├── schema.sql               # Verilənlər bazası sxemi
+│   ├── seed.sql                 # Başlanğıc data
+│   └── storage.sql              # Saxlama konfiqurasiyası
+└── public/                      # Statik aktivlər
 ```
 
-## 🚀 Getting Started
+## 🚀 Başlanğıc
 
-### Prerequisites
+### Tələblər
 
-- **Node.js** 20.x or higher
-- **npm** 9.x or higher
-- **Supabase account** (free tier available at [supabase.com](https://supabase.com))
+- **Node.js** 20.x və ya daha yüksək
+- **npm** 9.x və ya daha yüksək
+- **Supabase hesabı** ([supabase.com](https://supabase.com) saytında pulsuz tier mövcuddur)
 
-### Installation
+### Quraşdırma
 
-1. **Clone the repository**
+1. **Repozitoriyanı klonlayın**
    ```bash
    git clone https://github.com/yourusername/kaelparfum.git
    cd kaelparfum
    ```
 
-2. **Install dependencies**
+2. **Asılılıqları quraşdırın**
    ```bash
    npm install
    ```
 
-3. **Set up environment variables**
+3. **Mühit dəyişənlərini qurun**
    
-   Create a `.env.local` file in the root directory:
+   Kök qovluqda `.env.local` faylı yaradın:
    ```bash
    cp .env.example .env.local
    ```
    
-   Fill in your Supabase credentials (see [Environment Variables](#-environment-variables))
+   Supabase məlumatlarınızı doldurun (bax [Mühit Dəyişənləri](#-mühit-dəyişənləri))
 
-4. **Set up the database**
+4. **Verilənlər bazasını qurun**
    
-   Run the SQL files in your Supabase SQL Editor in this order:
+   SQL fayllarını Supabase SQL Editor-da bu ardıcıllıqla işlədin:
    ```bash
    1. supabase/schema.sql
    2. supabase/storage.sql
-   3. supabase/seed.sql (optional)
+   3. supabase/seed.sql (ixtiyari)
    ```
 
-5. **Run the development server**
+5. **Development serverini işə salın**
    ```bash
    npm run dev
    ```
 
-6. **Open your browser**
+6. **Brauzeri açın**
    
-   Navigate to [http://localhost:3000](http://localhost:3000)
+   [http://localhost:3000](http://localhost:3000) ünvanına gedin
 
-## 🔐 Environment Variables
+## 🔐 Mühit Dəyişənləri
 
-Create a `.env.local` file with the following variables:
+Aşağıdakı dəyişənlərlə `.env.local` faylı yaradın:
 
 ```env
-# Supabase Configuration
+# Supabase Konfiqurasiyası
 NEXT_PUBLIC_SUPABASE_URL=your_supabase_project_url
 NEXT_PUBLIC_SUPABASE_ANON_KEY=your_supabase_anon_key
 
-# Site Configuration (Optional - defaults in config.ts)
+# Sayt Konfiqurasiyası (İxtiyari - config.ts-də default var)
 NEXT_PUBLIC_SITE_URL=http://localhost:3000
 NEXT_PUBLIC_WHATSAPP_NUMBER=994709717477
 NEXT_PUBLIC_DELIVERY_FEE=5
 NEXT_PUBLIC_FREE_DELIVERY_THRESHOLD=50
 ```
 
-### Getting Supabase Credentials
+### Supabase Məlumatlarını Əldə Etmək
 
-1. Create a project at [supabase.com](https://supabase.com)
-2. Go to **Project Settings** → **API**
-3. Copy the **Project URL** and **anon/public key**
+1. [supabase.com](https://supabase.com) saytında layihə yaradın
+2. **Project Settings** → **API** bölməsinə gedin
+3. **Project URL** və **anon/public key** kopyalayın
 
-## 💾 Database Setup
+## 💾 Verilənlər Bazasının Qurulması
 
-### Schema Overview
+### Sxemə Ümumi Baxış
 
-The database includes the following main tables:
+Verilənlər bazası aşağıdakı əsas cədvəlləri ehtiva edir:
 
-- **categories** - Product categories (hierarchical with parent_id)
-- **brands** - Product brands
-- **products** - Main products table with full-text search
-- **product_images** - Product image gallery
-- **product_variants** - Product variants (sizes, types, etc.)
-- **profiles** - User profiles (extends auth.users)
-- **addresses** - User shipping addresses
-- **orders** - Customer orders
-- **order_items** - Order line items
-- **reviews** - Product reviews and ratings
-- **wishlists** - User wishlists
-- **site_settings** - Configurable site settings
+- **categories** - Məhsul kateqoriyaları (parent_id ilə iyerarxik)
+- **brands** - Məhsul brendləri
+- **products** - Tam mətn axtarışı ilə əsas məhsullar cədvəli
+- **product_images** - Məhsul şəkil qalereyası
+- **product_variants** - Məhsul variantları (ölçülər, növlər və s.)
+- **profiles** - İstifadəçi profilləri (auth.users-i genişləndirir)
+- **addresses** - İstifadəçi çatdırılma ünvanları
+- **orders** - Müştəri sifarişləri
+- **order_items** - Sifariş sətir elementləri
+- **reviews** - Məhsul rəyləri və reytinqlər
+- **wishlists** - İstifadəçi sevimliləri
+- **site_settings** - Tənzimlənən sayt parametrləri
 
-### Key Features
+### Əsas Xüsusiyyətlər
 
-- **Row Level Security (RLS)** - All tables have RLS policies
-- **Full-text Search** - Products have a `search_vector` column
-- **Auto-generated Order Numbers** - Format: `KP20260208001`
-- **Triggers** - Auto-update `updated_at` timestamps
-- **Functions** - Stock status, discount calculations, etc.
+- **Row Level Security (RLS)** - Bütün cədvəllərdə RLS siyasətləri var
+- **Tam Mətn Axtarışı** - Məhsullarda `search_vector` sütunu var
+- **Avtomatik Sifariş Nömrələri** - Format: `KP20260208001`
+- **Triggerlər** - `updated_at` timestamp-lərini avtomatik yeniləyir
+- **Funksiyalar** - Stok statusu, endirim hesablamaları və s.
 
-### Running Migrations
+### Miqrasiyaların İşə Salınması
 
-Execute the SQL files in your Supabase dashboard:
+SQL fayllarını Supabase panelində icra edin:
 
-1. Open **SQL Editor** in Supabase dashboard
-2. Create a new query
-3. Copy contents from `supabase/schema.sql`
-4. Click **Run**
-5. Repeat for `storage.sql` and `seed.sql`
+1. Supabase panelində **SQL Editor** açın
+2. Yeni sorğu yaradın
+3. `supabase/schema.sql` faylının məzmununu kopyalayın
+4. **Run** düyməsini basın
+5. `storage.sql` və `seed.sql` üçün təkrarlayın
 
-### Storage Buckets
+### Saxlama Bucketləri
 
-The following storage buckets are needed:
+Aşağıdakı saxlama bucketlərinə ehtiyac var:
 
-- `products` - Product images
-- `categories` - Category images
-- `brands` - Brand logos
+- `products` - Məhsul şəkilləri
+- `categories` - Kateqoriya şəkilləri
+- `brands` - Brend loqoları
 
-Configure these in the Supabase Storage section or run `storage.sql`.
+Bunları Supabase Storage bölməsində konfiqurasiya edin və ya `storage.sql` işlədin.
 
-## 📜 Scripts
+## 📜 Skriptlər
 
 ```bash
 # Development
-npm run dev          # Start development server (http://localhost:3000)
+npm run dev          # Development serverini başlat (http://localhost:3000)
 
 # Production
-npm run build        # Build for production
-npm run start        # Start production server
+npm run build        # Production üçün build et
+npm run start        # Production serverini başlat
 
-# Code Quality
-npm run lint         # Run ESLint
+# Kod Keyfiyyəti
+npm run lint         # ESLint işlət
 ```
 
-## 🌍 Deployment
+## 🌍 Yerləşdirmə
 
-### Deploy to Vercel (Recommended)
+### Vercel-ə Yerləşdirmə (Tövsiyə olunur)
 
-1. **Push your code to GitHub**
+1. **Kodunuzu GitHub-a göndərin**
 
-2. **Import to Vercel**
-   - Go to [vercel.com](https://vercel.com)
-   - Import your repository
-   - Add environment variables
-   - Deploy
+2. **Vercel-ə import edin**
+   - [vercel.com](https://vercel.com) saytına gedin
+   - Repozitoriyanızı import edin
+   - Mühit dəyişənlərini əlavə edin
+   - Deploy edin
 
-3. **Add environment variables in Vercel**
-   - Go to **Settings** → **Environment Variables**
-   - Add all variables from `.env.local`
+3. **Vercel-də mühit dəyişənlərini əlavə edin**
+   - **Settings** → **Environment Variables** bölməsinə gedin
+   - `.env.local` faylındakı bütün dəyişənləri əlavə edin
 
-### Deploy to Other Platforms
+### Digər Platformalara Yerləşdirmə
 
-This Next.js app can be deployed to:
-- Vercel (recommended)
+Bu Next.js tətbiqi aşağıdakı platformalara yerləşdirilə bilər:
+- Vercel (tövsiyə olunur)
 - Netlify
 - Railway
 - Render
-- Any Node.js hosting platform
+- İstənilən Node.js hosting platforması
 
-## 🧑‍💼 Admin Access
+## 🧑‍💼 Admin Girişi
 
-To create an admin user:
+Admin istifadəçi yaratmaq üçün:
 
-1. Sign up for an account through the website
-2. Go to your Supabase dashboard
-3. Navigate to **Authentication** → **Users**
-4. Find your user in the list
-5. Go to **Table Editor** → **profiles**
-6. Find your profile row
-7. Add a `role` column with value `'admin'` (or update the schema to include a role column)
+1. Sayt vasitəsilə hesab yaradın
+2. Supabase panelinə gedin
+3. **Authentication** → **Users** bölməsinə keçin
+4. Siyahıda öz istifadəçinizi tapın
+5. **Table Editor** → **profiles** bölməsinə gedin
+6. Profil sətrinizi tapın
+7. `role` sütunu əlavə edin və `'admin'` dəyərini verin (və ya sxemə role sütunu əlavə edin)
 
-**Note:** You may need to modify the `profiles` table to include a `role` column:
+**Qeyd:** `profiles` cədvəlinə `role` sütunu əlavə etməli ola bilərsiniz:
 
 ```sql
 ALTER TABLE profiles ADD COLUMN role VARCHAR(20) DEFAULT 'user';
 UPDATE profiles SET role = 'admin' WHERE id = 'your-user-id';
 ```
 
-## 🤝 Contributing
+## 🤝 Töhfə
 
-Contributions are welcome! Please follow these steps:
+Töhfələr xoş qarşılanır! Zəhmət olmasa bu addımları izləyin:
 
-1. Fork the repository
-2. Create a feature branch (`git checkout -b feature/amazing-feature`)
-3. Commit your changes (`git commit -m 'Add amazing feature'`)
-4. Push to the branch (`git push origin feature/amazing-feature`)
-5. Open a Pull Request
+1. Repozitoriyanı fork edin
+2. Xüsusiyyət branch yaradın (`git checkout -b feature/amazing-feature`)
+3. Dəyişikliklərinizi commit edin (`git commit -m 'Add amazing feature'`)
+4. Branch-ı push edin (`git push origin feature/amazing-feature`)
+5. Pull Request açın
 
-## 📄 License
+## 📄 Lisenziya
 
-This project is proprietary and confidential. All rights reserved.
+Bu layihə məxfi və şəxsidir. Bütün hüquqlar qorunur.
 
-## 📞 Contact
+## 📞 Əlaqə
 
 **KƏEL PARFÜM**
-- 📱 Phone: +994 070 971 74 77 / +994 051 572 73 78
+- 📱 Telefon: +994 070 971 74 77 / +994 051 572 73 78
 - 📧 Email: info@kaelparfum.com
-- 📍 Location: Qəbələ, Azerbaijan
+- 📍 Ünvan: Qəbələ, Azərbaycan
 - 📷 Instagram: [@kaelparfum](https://www.instagram.com/kaelparfum/)
 
-## 🙏 Acknowledgments
+## 🙏 Təşəkkürlər
 
-- [Next.js](https://nextjs.org/) - The React Framework
-- [Supabase](https://supabase.com/) - The Open Source Firebase Alternative
-- [shadcn/ui](https://ui.shadcn.com/) - Beautifully designed components
-- [Vercel](https://vercel.com/) - Deployment platform
+- [Next.js](https://nextjs.org/) - React Framework
+- [Supabase](https://supabase.com/) - Açıq Mənbəli Firebase Alternativ
+- [shadcn/ui](https://ui.shadcn.com/) - Gözəl dizayn edilmiş komponentlər
+- [Vercel](https://vercel.com/) - Yerləşdirmə platforması
 
 ---
 
-Built with ❤️ for KƏEL PARFÜM
+KƏEL PARFÜM üçün ❤️ ilə hazırlanmışdır
